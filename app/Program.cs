@@ -10,6 +10,8 @@ class Program
     private const int StudentFreeDays = 14;
     private const int StudentFineLimit = 40;
     private const int GuestFreeDays = 7;
+    private const int AlumnaFreeDays = 10;
+    private const int AlumnaFineLimit = 25;
     private const int TeacherFlagDays = 60;
 
     private sealed class InputRow
@@ -130,7 +132,7 @@ class Program
 
     private static bool IsKnownType(string type)
     {
-        return type == "student" || type == "teacher" || type == "guest";
+        return type == "student" || type == "teacher" || type == "guest" || type == "alumna";
     }
 
     private static int CalculateFine(string type, int borrowedDays)
@@ -145,6 +147,12 @@ class Program
 
         if (type == "guest" && borrowedDays > GuestFreeDays)
             return (int)Math.Ceiling((borrowedDays - GuestFreeDays) * 2.5);
+
+        if (type == "alumna" && borrowedDays > AlumnaFreeDays)
+        {
+            int fine = (int)Math.Ceiling((borrowedDays - AlumnaFreeDays) * 1.5);
+            return Math.Min(fine, AlumnaFineLimit);
+        }
 
         return 0;
     }
