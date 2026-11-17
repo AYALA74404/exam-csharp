@@ -1,0 +1,144 @@
+{
+ "kind": "placement-results",
+ "version": 1,
+ "mode": "D",
+ "lang": "csharp",
+ "created": "2026-11-17T17:16:27",
+ "created_epoch": 1794928587113,
+ "at": null,
+ "build": {
+  "ok": true,
+  "output": "Build succeeded.\n    3 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.50",
+  "ms": 1801
+ },
+ "runs": [
+  {
+   "file": "check2.txt",
+   "exit": 0,
+   "timed_out": false,
+   "ms": 87,
+   "stdout": "FINES\r\n201,הניה ברק,40\r\n202,צפורה לנדאו,6\r\n214,זלדה פרי,8\r\n203,גליה שפירא,5\r\n204,דליה כהנא,25\r\n205,יוכבד ליבר,2\r\n206,תמר אלון,0\r\n207,שולמית רז,0\r\n208,רות בן דוד,0\r\n209,ברכה טל,2\r\n210,טליה נוי,13\r\n211,פזית הורוביץ,0\r\n212,נאוה שגיא,0\r\n213,חיה מור,6\r\n217,מרים אשכנזי,4\r\n218,אילנה צור,4\r\nFLAGGED\r\n211,פזית הורוביץ\r\nERRORS\r\nTOTAL,115\r\nTOP_BOOKS\r\nאיסתרק,5\r\nקיצור שולחן ערוך,5\r\nעולם חירש,4\r\nAT_RISK\r\n",
+   "stderr_tail": "skeleton ok: read check2.txt - report day 200 - 17 rows",
+   "decode_problem": false
+  }
+ ],
+ "sample_run": {
+  "file": "sample.txt",
+  "exit": 0,
+  "timed_out": false,
+  "ms": 85,
+  "stdout": "FINES\r\n11,רחל כהן,2\r\n12,מרים לוי,40\r\n21,שרה גולד,0\r\n31,לאה רוזן,8\r\nFLAGGED\r\n21,שרה גולד\r\nERRORS\r\n13,דינה אבן,student,קיצור שולחן ערוך,50,45\r\nTOTAL,50\r\nTOP_BOOKS\r\nעולם חירש,2\r\nאיסתרק,1\r\nלהשאר יהודי,1\r\nAT_RISK\r\n",
+  "stderr_tail": "skeleton ok: read sample.txt - report day 120 - 6 rows",
+  "decode_problem": false
+ },
+ "warnings": [],
+ "files": [
+  {
+   "path": "app/Program.cs",
+   "lines": 239,
+   "classes": [
+    "Program",
+    "InputRow",
+    "ReaderReport",
+    "ReportData"
+   ],
+   "functions": [
+    {
+     "name": "InputRow",
+     "lines": 7
+    },
+    {
+     "name": "ReaderReport",
+     "lines": 5
+    },
+    {
+     "name": "Main",
+     "lines": 14
+    },
+    {
+     "name": "BuildReport",
+     "lines": 29
+    },
+    {
+     "name": "TryReadLoan",
+     "lines": 23
+    },
+    {
+     "name": "IsEmptyRequiredField",
+     "lines": 9
+    },
+    {
+     "name": "IsKnownType",
+     "lines": 4
+    },
+    {
+     "name": "CalculateFine",
+     "lines": 21
+    },
+    {
+     "name": "GetOrCreateReader",
+     "lines": 10
+    },
+    {
+     "name": "AddBook",
+     "lines": 4
+    },
+    {
+     "name": "AddFlaggedReader",
+     "lines": 5
+    },
+    {
+     "name": "PrintReport",
+     "lines": 28
+    },
+    {
+     "name": "ReadReportDay",
+     "lines": 4
+    },
+    {
+     "name": "ReadRows",
+     "lines": 10
+    },
+    {
+     "name": "FindSample",
+     "lines": 12
+    }
+   ],
+   "type_ifs": 5
+  },
+  {
+   "path": "app/Reader.cs",
+   "lines": 69,
+   "classes": [
+    "Type",
+    "Reader"
+   ],
+   "functions": [
+    {
+     "name": "Reader",
+     "lines": 8
+    },
+    {
+     "name": "Reader",
+     "lines": 7
+    },
+    {
+     "name": "calculatorForStudents",
+     "lines": 15
+    },
+    {
+     "name": "NeedToPay",
+     "lines": 10
+    }
+   ],
+   "type_ifs": 0
+  }
+ ],
+ "git": {
+  "available": true,
+  "commit": "835ec00",
+  "note": "nothing new to commit",
+  "log": "9e39032|2026-11-17 13:36:50 +0200|start\n2f50730|2026-11-17 16:20:10 +0200|start the project\ne0a4d04|2026-11-17 17:01:29 +0200|Complete library fines report\n666a02d|2026-11-17 17:14:03 +0200|change 1\n835ec00|2026-11-17 17:14:52 +0200|change 2",
+  "numstat": "commit|9e39032|start\n\n7\t0\t.gitignore\n55\t0\tapp/Program.cs\n11\t0\tapp/app.csproj\n449\t0\tcheck/run_checks.py\n8\t0\tdata/sample.txt\ncommit|2f50730|start the project\n\n30\t1\tapp/Program.cs\n69\t0\tapp/Reader.cs\n3\t0\tapp/app.slnx\ncommit|e0a4d04|Complete library fines report\n\n191\t44\tapp/Program.cs\ncommit|666a02d|change 1\n\n1\t1\tapp/Program.cs\n153\t0\tresults_C.json\ncommit|835ec00|change 2\n\n9\t1\tapp/Program.cs"
+ }
+}
