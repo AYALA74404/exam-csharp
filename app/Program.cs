@@ -1,3 +1,4 @@
+using App;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -35,10 +36,14 @@ class Program
             if (lines[i].Trim() == "") continue;
             string[] fields = lines[i].Split(',');
             for (int j = 0; j < fields.Length; j++) fields[j] = fields[j].Trim();
-            rows.Add(fields);
+            rows.Add(fields);// מקבל מערך שכל איבר מכיל נתוני השאלה
         }
         return rows;
     }
+
+
+
+
 
     // Without a path, look for data/sample.txt next to the project, also when started from Visual Studio
     static string FindSample()
@@ -51,5 +56,29 @@ class Program
             dir = dir.Parent;
         }
         return Path.Combine("data", "sample.txt");
+    }
+
+
+    public static List<string> calculatorForStudent(List<string> rows)
+    {
+        int sumDays = 0;
+        int sum = 0;
+        List<string> reader = new List<string>();
+        for (int i = 0; i < rows.Count; i++)
+        {
+            for (int j = 0; j < rows[i].Length; j++)
+            {
+                string[] fields = rows[i].Split(',');
+                if (fields[5] != null)
+                    sumDays = int.Parse(fields[4]) - int.Parse(fields[3]);
+                if (sumDays > 15)
+                {
+                   sum = sumDays - 14;
+                }
+                string[] details = { fields[0], fields[1], fields[2], fields[3], fields[4], fields[5] , sum.ToString() };
+                
+
+            }
+        }
     }
 }
