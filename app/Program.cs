@@ -8,7 +8,7 @@ class Program
 {
     private const int FieldCount = 6;
     private const int StudentFreeDays = 14;
-    private const int StudentFineLimit = 30;
+    private const int StudentFineLimit = 40;
     private const int GuestFreeDays = 7;
     private const int TeacherFlagDays = 60;
 
